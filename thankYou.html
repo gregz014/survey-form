@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="thankStyles.css" />
+    <title>Thank you!</title>
+  </head>
+  <body>
+    <p data-name></p>
+
+    <script>
+      (() => {
+        const dataName = document.querySelector('[data-name]');
+        const qStr = window.location.search;
+        const urlParams = new URLSearchParams(qStr);
+        const name = urlParams.get('name');
+
+        dataName.textContent = `Thank you! ${name}`;
+      })();
+    </script>
+  </body>
+</html>

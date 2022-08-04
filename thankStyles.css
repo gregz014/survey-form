@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: xx-large;
+  font-family: 'Mouse Memoirs', sans-serif;
+  width: 400px;
+  height: 70px;
+  padding: 50px;
+  text-align: center;
+
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-name: blink;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    background: #333;
+    color: white;
+  }
+
+  50% {
+    background: #ccc;
+    color: black;
+    border-radius: 48px;
+  }
+}
